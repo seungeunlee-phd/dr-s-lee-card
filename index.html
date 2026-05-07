@@ -166,9 +166,10 @@
   
   /* ====== BUSINESS SECTION (clickable link to website) ====== */
   .business {
-    display: block;
-    position: relative;
-    padding: 18px 28px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 22px 14px 22px;
     background: var(--off-white);
     border-bottom: 1px solid var(--border);
     text-decoration: none;
@@ -179,15 +180,44 @@
     background: var(--paper);
   }
 
+  .business-globe {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--paper);
+    border-radius: 8px;
+    color: var(--navy);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .business-globe svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .business:hover .business-globe {
+    background: rgba(44, 74, 107, 0.08);
+    color: var(--navy-deep);
+  }
+
+  .business-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
   .business-arrow {
-    position: absolute;
-    top: 18px;
-    right: 22px;
     font-size: 14px;
     color: var(--accent-warm);
     opacity: 0.7;
     transition: transform 0.2s ease, opacity 0.2s ease;
     line-height: 1;
+    flex-shrink: 0;
   }
 
   .business:hover .business-arrow {
@@ -401,8 +431,17 @@
   
   <!-- BUSINESS INFO (link to website) -->
   <a class="business" href="https://home.drsleelifesciences.com" target="_blank" rel="noopener noreferrer" aria-label="Visit website home.drsleelifesciences.com">
-    <div class="company">DR. S. LEE LIFE SCIENCES</div>
-    <div class="pillars">Strategy · Science · Communication</div>
+    <span class="business-globe" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    </span>
+    <span class="business-content">
+      <span class="company">DR. S. LEE LIFE SCIENCES</span>
+      <span class="pillars">Strategy · Science · Communication</span>
+    </span>
     <span class="business-arrow" aria-hidden="true">↗</span>
   </a>
   
