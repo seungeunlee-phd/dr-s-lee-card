@@ -9,31 +9,45 @@
 <meta property="og:description" content="Strategy · Science · Communication. Rigor in science. Clarity in strategy.">
 <meta property="og:type" content="profile">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAB1CAYAAAA2KKAVAAAAAklEQVR4AewaftIAAAH0SURBVO3Bv0sCYRjA8e/zHkgJUVNDkU1NDUKLW9Pm0v8QtAYNbW1NbkH9CdHQ3Bg0BAlBRBA09AOhxaEhKNzCpcEhMnvpvevu+ngTjAvB+/k88HUe5ChfmMIxiYBREhMCRkkFIBVQUBBQEFAQUBBQEFAQUBBQEFAQUBBQEFAQUBBQEFAQUBBQEFAQUBBQEFAQUFBkXSAgL/N6yQFBKfkwtBIKMq+HjB9eBiYlAEZS5vWQ7sNL4LJSEoBzShTFsnZ4IcUmgcxKKZUAmJNXBaaP3vhIvw8ZN+I/JIBZeVVgrPrIqxQbKzZJQNlkXReYrz7iIzsQXGpAUS4SwNS6KrBQfeQjuTIDZQ9wsZAoVwlgvvqIVnfgBhcaSBQjAcw3HtHqGmwl/kkCmGs8oNV1bMxTiCnEFPYSwGxjXavruJlnEFOIKcQU9hHAdOMOra7DZl6BmEJMIaawvwAm6jdYr0iycgwxhZjC/gKMl69Y/3VBki2DmEJMIaZwiAAGSudYrz1JsmIQU4gpxBQOFcDA9SnWKzckGRkS04g/IqYQUzhkAH4npqn8WpFkQiBmEFOIKcQUDh1A/8sR1V8rkozzxhRiCjGFmMI+gjFTOMHar5d/eUrxyjr+2D9+0M5fyxZJngAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   
   :root {
-    --navy: #1F4E79;
-    --navy-deep: #173E5F;
-    --gold: #C9A961;
-    --gold-soft: #D4B879;
+    --navy: #2C4A6B;
+    --navy-deep: #1F3550;
+    --gold: #C5B59A;
+    --gold-soft: #D6C9B0;
+    --sage: #9BAFA1;
+    --sage-soft: #B0BEB3;
+    --accent-warm: #C77E5A;
+    --text-emphasis: #A85E3D;
     --cream: #E8DCC4;
     --off-white: #FAFAF7;
     --paper: #F5F3EE;
     --text-dark: #2A2A26;
-    --text-medium: #555;
-    --text-light: #888;
-    --text-faint: #999;
+    --text-medium: #4A4A45;
+    --text-light: #5A5A54;
+    --text-faint: #8B8B83;
     --border: #E5DFD0;
+    --border-soft: #EFEAD9;
+
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   
   html, body {
     background: var(--paper);
     color: var(--text-dark);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--sans);
     line-height: 1.5;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   }
   
   body {
@@ -50,8 +64,8 @@
     border-radius: 16px;
     box-shadow:
       0 1px 2px rgba(0, 0, 0, 0.04),
-      0 8px 32px rgba(31, 78, 121, 0.08),
-      0 32px 80px rgba(31, 78, 121, 0.04);
+      0 8px 32px rgba(44, 74, 107, 0.08),
+      0 32px 80px rgba(44, 74, 107, 0.04);
     overflow: hidden;
     animation: cardEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -84,7 +98,7 @@
     right: -30%;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(197, 181, 154, 0.08) 0%, transparent 70%);
     pointer-events: none;
   }
   
@@ -100,7 +114,7 @@
   }
   
   .logo-tagline {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: var(--serif);
     font-size: 11px;
     font-style: italic;
     color: var(--gold);
@@ -126,7 +140,7 @@
   }
   
   .name {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: var(--serif);
     font-size: 24px;
     font-weight: 500;
     color: var(--off-white);
@@ -143,7 +157,7 @@
   }
   
   .role {
-    font-family: Georgia, serif;
+    font-family: var(--serif);
     font-size: 13px;
     font-style: italic;
     color: var(--cream);
@@ -158,7 +172,7 @@
   }
   
   .company {
-    font-family: Georgia, serif;
+    font-family: var(--serif);
     font-size: 13px;
     font-weight: 500;
     color: var(--navy);
@@ -275,7 +289,7 @@
   .save-btn:hover {
     background: var(--navy-deep);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(31, 78, 121, 0.2);
+    box-shadow: 0 4px 12px rgba(44, 74, 107, 0.2);
   }
   
   .save-btn:active {
@@ -339,9 +353,9 @@
   <header class="header">
     <div class="logo-section">
       <svg class="logo-svg" width="36" height="60" viewBox="0 0 60 110" xmlns="http://www.w3.org/2000/svg" aria-label="Dr. S. Lee Life Sciences logo">
-        <circle cx="15" cy="15" r="5" fill="#1F4E79" stroke="#E8DCC4" stroke-width="2"/>
+        <circle cx="15" cy="15" r="5" fill="#2C4A6B" stroke="#E8DCC4" stroke-width="2"/>
         <circle cx="40" cy="40" r="5" fill="#E8DCC4"/>
-        <circle cx="15" cy="65" r="5" fill="#1F4E79" stroke="#E8DCC4" stroke-width="2"/>
+        <circle cx="15" cy="65" r="5" fill="#2C4A6B" stroke="#E8DCC4" stroke-width="2"/>
         <circle cx="40" cy="90" r="5" fill="#E8DCC4"/>
         <line x1="18.54" y1="18.54" x2="36.46" y2="36.46" stroke="#E8DCC4" stroke-width="1.5" stroke-linecap="round"/>
         <line x1="36.46" y1="43.54" x2="18.54" y2="61.46" stroke="#E8DCC4" stroke-width="1.5" stroke-linecap="round"/>
