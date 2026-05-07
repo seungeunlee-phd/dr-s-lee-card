@@ -164,11 +164,35 @@
     letter-spacing: 0.2px;
   }
   
-  /* ====== BUSINESS SECTION ====== */
+  /* ====== BUSINESS SECTION (clickable link to website) ====== */
   .business {
+    display: block;
+    position: relative;
     padding: 18px 28px 16px;
     background: var(--off-white);
     border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .business:hover {
+    background: var(--paper);
+  }
+
+  .business-arrow {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 14px;
+    color: var(--accent-warm);
+    opacity: 0.7;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    line-height: 1;
+  }
+
+  .business:hover .business-arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
   }
   
   .company {
@@ -375,11 +399,12 @@
     <div class="role">Founder &amp; Principal Consultant</div>
   </header>
   
-  <!-- BUSINESS INFO -->
-  <section class="business">
+  <!-- BUSINESS INFO (link to website) -->
+  <a class="business" href="https://home.drsleelifesciences.com" target="_blank" rel="noopener noreferrer" aria-label="Visit website home.drsleelifesciences.com">
     <div class="company">DR. S. LEE LIFE SCIENCES</div>
     <div class="pillars">Strategy · Science · Communication</div>
-  </section>
+    <span class="business-arrow" aria-hidden="true">↗</span>
+  </a>
   
   <!-- CONTACT BUTTONS -->
   <nav class="contacts" aria-label="Contact methods">
@@ -421,21 +446,6 @@
       <span class="contact-text">
         <span class="contact-label">LinkedIn</span>
         <span class="contact-value">linkedin.com/in/seungeunlee-phd</span>
-      </span>
-    </a>
-
-    <!-- Website -->
-    <a href="https://home.drsleelifesciences.com" class="contact-btn" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
-      <span class="contact-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-      </span>
-      <span class="contact-text">
-        <span class="contact-label">Website</span>
-        <span class="contact-value">home.drsleelifesciences.com</span>
       </span>
     </a>
 
