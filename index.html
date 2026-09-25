@@ -278,6 +278,19 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     letter-spacing: -0.05px;
+    /* Give the value column something to shrink into on narrow flex parents
+       so ellipsis actually kicks in instead of the URL wrapping. */
+    min-width: 0;
+    max-width: 100%;
+    display: block;
+  }
+  /* Narrow mobile: shrink the value a touch so the full LinkedIn URL still
+     fits on one line inside the ~288px card on 320px viewports. */
+  @media (max-width: 400px) {
+    .contact-value {
+      font-size: 12px;
+      letter-spacing: -0.15px;
+    }
   }
   
   /* Save Contact - special prominent button */
